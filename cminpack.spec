@@ -83,6 +83,5 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:%{buildroot}%{_libdir}
 %{_libdir}/lib%{name}.so
 %{_libdir}/lib%{name}ld.so
 %{_libdir}/lib%{name}s.so
-%endif
 %doc docs/*.html
 %doc docs/*.txt
