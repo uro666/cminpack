@@ -69,10 +69,8 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:%{buildroot}%{_libdir}
 %{_libdir}/lib%{name}.so.%{sonum}
 %{_libdir}/lib%{name}s.so.%{version}
 %{_libdir}/lib%{name}s.so.%{sonum}
-%ifnarch aarch64
 %{_libdir}/lib%{name}ld.so.%{version}
 %{_libdir}/lib%{name}ld.so.%{sonum}
-%endif
 %doc README.md
 %license CopyrightMINPACK.txt
 
@@ -84,8 +82,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:%{buildroot}%{_libdir}
 %{_libdir}/pkgconfig/%{name}s.pc
 %{_libdir}/lib%{name}.so
 %{_libdir}/lib%{name}s.so
-%ifnarch aarch64
-%{_libdir}/lib%{name}ld.so
-%endif
+%{_libdir}/lib%{name}ld.so.%{version}
+%{_libdir}/lib%{name}ld.so.%{sonum}
 %doc docs/*.html
 %doc docs/*.txt
